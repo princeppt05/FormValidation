@@ -3,28 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <link href="validation.css" rel="stylesheet">
   <title>validation</title>
 </head>
 <body>
 	<!-- Creating forms-->
+	<div>
+		<h1><center>Form Validation</center></h1>
+
+	</div>
 	<form>
- 	
+ 	<center>
  		<div>
-   		Username:&nbsp	<input type="text" placeholder="Username" id="uname">
+   		*Username:&nbsp	<input type="text" placeholder="Username" id="uname">
    			<div id="userV">
    			
  			</div>
   	<br>
 
   		<div>
-  		Password:&nbsp&nbsp		<input type="text" placeholder="Password" id="pwd">
+  		*Password:&nbsp&nbsp		<input type="text" placeholder="Password" id="pwd">
   			<div id="passV">
    			
  			</div>
 		</div>
 	<br>
 		<div>
-  		Email:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" placeholder="Email" id="email">
+  		*Email:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" placeholder="Email" id="email">
   			<div id="emailV">
    			
  			</div>
@@ -46,6 +51,7 @@
 		</div>
 	<br>
 		<div>
+		<h3>Gender</h3>
  		<input type="radio" name="gender" id="male"> Male<br>
  		<input type="radio" name="gender" id="female"> Female<br>
  		</div>
@@ -53,7 +59,45 @@
 		<div>
   		<input type="button" value="Submit" id="btn">
 		</div>
+		</center>
 </form>
+
+			<!-- <div id="display">
+					<table>
+							  <tr>
+							    <th>Username</th>
+							    <th>Password</th>
+							    <th>Email</th>
+							    <th>Location</th>
+							    <th>Company</th>
+							    <th>Gender</th>
+							  </tr>
+							  <tr>
+							    <td>Peter</td>
+							    <td>Griffin</td>
+							    <td>$100</td>
+							  </tr>
+							  <tr>
+							    <td>Lois</td>
+							    <td>Griffin</td>
+							    <td>$150</td>
+							  </tr>
+							  <tr>
+							    <td>Joe</td>
+							    <td>Swanson</td>
+							    <td>$300</td>
+							  </tr>
+							  <tr>
+							    <td>Cleveland</td>
+							    <td>Brown</td>
+							    <td>$250</td>
+							</tr>
+        			</table>
+
+			</div> -->
+
+			<div id="result">
+			</div>
 
 
   
