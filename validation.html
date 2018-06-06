@@ -12,7 +12,7 @@
 		<h1><center>Form Validation</center></h1>
 
 	</div>
-	<form>
+	<form id="myForm">
  	<center>
  		<div>
    		*Username:&nbsp	<input type="text" placeholder="Username" id="uname">
@@ -51,9 +51,9 @@
 		</div>
 	<br>
 		<div>
-		<h3>Gender</h3>
- 		<input type="radio" name="gender" id="male"> Male<br>
- 		<input type="radio" name="gender" id="female"> Female<br>
+			<h3>Gender</h3>
+ 			<input type="radio" name="gender" id="male" value="male"> Male<br>
+ 			<input type="radio" name="gender" id="female" value="female"> Female<br>
  		</div>
  	<br>
 		<div>
@@ -61,7 +61,9 @@
 		</div>
 		</center>
 </form>
+		<div id="error">
 
+		</div>
 			<!-- <div id="display">
 					<table>
 							  <tr>
@@ -96,9 +98,10 @@
 
 			</div> -->
 
-			<div id="result">
-			</div>
+		 	<table id="result">
 
+			</table>
+		
 
   
 
