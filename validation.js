@@ -1,10 +1,11 @@
 
 
 var save = [];
-				if(localStorage.a_save)
-				{
-				save = JSON.parse(localStorage.a_save);
-				}
+				// if(localStorage.a_save)
+				// {
+				// save = JSON.parse(localStorage.a_save);
+				// // table();
+				// }
 
 /* var gender = "";
     if (male.checked == true) {
@@ -13,7 +14,29 @@ var save = [];
     else if (female.checked == true) {
         gender = document.getElementById('gender2').value;
     }
-									*/
+		
+
+
+							*/
+
+
+// function maleg(){
+// 	if (document.getElementById("male").checked = true)
+// {
+// 	document.getElementById('male').value = "male";
+// }
+// else{
+// 	document.getElementById('male').value = "";
+// 	}
+// }
+// if (document.getElementById("female").checked = true)
+// 	{
+// 	document.getElementById('female').value = "female";
+// 	}
+// else{
+// 	document.getElementById('female').value = "";
+// 	}
+// }
 
 document.getElementById('btn').addEventListener('click',function() 
 									{
@@ -27,8 +50,8 @@ document.getElementById('btn').addEventListener('click',function()
 														'email':document.getElementById('email').value,
 														'location':document.getElementById('lctn').value,
 														'company':document.getElementById('cmpy').value,
-														'genderm':document.getElementById('male').value,
-														'genderf':document.getElementById('female').value,
+														'gender':document.querySelector('input[name="gender"]:checked').value
+														
 
 													};
 													//var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -36,6 +59,8 @@ document.getElementById('btn').addEventListener('click',function()
 														{
 															save.push(user);
 													localStorage.a_save = JSON.stringify(save);
+													table();
+														
 														}
 														if(user.username=="")
 														{
@@ -51,10 +76,11 @@ document.getElementById('btn').addEventListener('click',function()
 														{
 															document.getElementById("emailV").innerHTML = "Email cannot be empty";
 														}
+														
 														 // if (male.checked == false && female.checked == false) {
        								// 						 document.getElementById('select').insertAdjacentHTML('afterend', '<p style="color:red;" id="generror">You must select your gender!</p>');
        								// 						}
-       								
+
 
 
 														// if ((user.email.value).indexOf('@') >= 0 && em.indexOf('.com') > em.indexOf('@')))
@@ -66,21 +92,25 @@ document.getElementById('btn').addEventListener('click',function()
 														// 	document.getElementById("emailV1").innerHTML = "Invalid Email";
 														// }
 													
+														myFunction();
 														
-															table();
-
+															
+															
 									});
 
 
+function myFunction() {
+    document.getElementById("myForm").reset();
+}
 
 function table() {
-    console.log(localStorage.a_save);
+    //console.log(localStorage.a_save);
     if(localStorage.a_save)
     {
     var resp = JSON.parse(localStorage.a_save);
     var len = resp.length;
     html = '';
-    html = '<table border="1" style="border-collapse:collapse;" id="result1"><tr><td>Username</td><td>Password</td><td>Email</td><td>Location</td><td>Company</td><td>Gender</td></tr>';
+    html += '<table border="1" style="border-collapse:collapse;" id="result1"><tr><td>Username</td><td>Password</td><td>Email</td><td>Location</td><td>Company</td><td>Gender</td></tr>';
     for (var i = 0; i < len; i++) {
         html += '<tr>';
         html += '<td>' + resp[i].username + '</td>';
@@ -88,9 +118,8 @@ function table() {
         html += '<td>' + resp[i].email+ '</td>';
         html += '<td>' + resp[i].location + '</td>';
         html += '<td>' + resp[i].company+ '</td>';
-        html += '<td>' + resp[i].genderm + '</td>';
-        html += '<td>' + resp[i].genderf + '</td>';
-        html += '</tr>';
+        html += '<td>' + resp[i].gender + '</td>';
+                html += '</tr>';
     }
     document.getElementById('result').insertAdjacentHTML('afterend', html);
 }
