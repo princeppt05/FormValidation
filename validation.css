@@ -1,0 +1,27 @@
+body{
+	width:100%;
+}
+
+form{
+	padding-top: 10px;
+	align-content: center;
+	width:100%;
+}
+
+
+
+#userV{
+
+	color:red;
+}
+
+#passV
+{
+color:red;
+}
+
+#emailV
+{
+	color:red;
+}
+
